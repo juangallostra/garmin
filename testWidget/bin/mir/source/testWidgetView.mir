@@ -1,0 +1,59 @@
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 3; ]
+import Toybox.Time;
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 6; ]
+class testWidgetView extends WatchUi.SimpleDataField{
+    [ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 6; ]
+    <init> {
+    }
+    [ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 9; ]
+    function initialize() as Void {
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_9_26_start:
+[ "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc" 10 8 ]
+        %tmp.2 = getv ? :SimpleDataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc" 11 8 ]
+        %tmp.4 = "Estrellas";
+        putv self :label %tmp.4;
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_9_26_stop:
+    }
+    [ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 18; ]
+    function compute(info as Activity.Info) as Numeric or Duration or String or Null {
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_18_85_start:
+[ "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc" 20 8 ]
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_8_if_stmt:
+        %tmp.1 = lgetv %info;
+        %tmp.2 = getv %tmp.1 :calories;
+        %tmp.3 = null;
+        %tmp.4 = eq %tmp.2 %tmp.3;
+        bf %tmp.4 @C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_8_if_end;
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_8_if_true:
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_35_start:
+[ "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc" 21 12 ]
+        %tmp.5 = 0.0;
+        ret %tmp.5;
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_35_stop:
+        goto @C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_8_if_end;
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_20_8_if_end:
+[ "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc" 23 8 ]
+        %tmp.6 = lgetv %info;
+        %tmp.7 = getv %tmp.6 :calories;
+        %tmp.8 = 165;
+        %tmp.9 = div %tmp.7 %tmp.8;
+        ret %tmp.9;
+C_Users_gallo_Documents_Mine_garmin_testWidget_source_testWidgetView_mc_18_85_stop:
+    }
+}
+[ @file = "C:\Users\gallo\Documents\Mine\garmin\testWidget\source\testWidgetView.mc"; @line = 1; ]
+<init> {
+}
